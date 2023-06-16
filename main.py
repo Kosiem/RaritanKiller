@@ -3,25 +3,16 @@ import re
 import time
 import pandas as pd
 
-excel_file_path = r'\\10.91.22.161\AudioDSPshare\fkubawsx\EXCEL\platformList.xlsx'
+excel_file_path = r'path_to_hostname_file'
 df = pd.read_excel(excel_file_path)
 ctrlr_values = df['Ctrlr']
 off_array = []
 
-raritan_ip = ["10.237.146.7", "10.237.147.15", "10.237.147.13", "10.237.147.11", "10.237.147.16", "10.237.147.4", "10.237.147.9" , "10.237.147.147", "10.237.147.13", "10.237.147.7"]
+raritan_ip = ["insert your pdu's ip here"]
 
 def raritansAv():
     print("Raritan PDU's:\n")
-    print("1. DR-01 : 10.237.146.7\n")
-    print("2. DR-02 : 10.237.147.15\n")
-    print("3. DR-03: 10.237.147.13\n")
-    print("4. DR-04: 10.237.147.11\n")
-    print("5. DR-05: 10.237.147.16\n")
-    print("6. DR-06: 10.237.147.4\n")
-    print("7. DR-06: 10.237.147.9\n")
-    print("8. DR-07: 10.237.147.147\n")
-    print("9. DR-08: 10.237.147.13\n")
-    print("10. DR-10: 10.237.147.7\n")
+#display info about your PDU's
 
 def showHelp():
     print("on:\n Choose outlet and turn it on\n syntax: [on] <outlet_number>\n")
