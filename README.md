@@ -46,14 +46,10 @@ The RaritanKiller application is under active development, and the following enh
 
 - Support for checking and displaying power consumption statistics of individual outlets.
 
-- Integration with external monitoring systems to provide real-time alerts and notifications.
-
-- Addition of a web-based interface for easier management and control of outlets.
-
 - Improved error handling and logging capabilities.
 
-- Compatibility with other PDU models and manufacturers.
 
 
 
-Thank you for using RaritanKiller! We hope this application simplifies the management of outlets in your Raritan PDUs and contributes to a more efficient power distribution system.
+
+
