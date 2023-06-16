@@ -1,43 +1,59 @@
 # RaritanKiller
 
-A python-developed application for managing outlets in a Raritan PDU, using the Raritan RPC library dedicated to this.
-Allows you to connect to a given PDU, and enable, disable and restart its outlets.
-It also offers options to check among all PDUs for outlets that are turned off and to turn them on automatically.
-Use of the program is possible via commands (such a custom CLI). To see the commands use help.
+RaritanKiller is a Python-developed application for managing outlets in a Raritan Power Distribution Unit (PDU) using the Raritan RPC library. It allows you to connect to a specific PDU and perform operations such as enabling, disabling, and restarting outlets. The application also provides options to check for turned-off outlets across all PDUs and automatically turn them on. Additionally, future development plans include adding features to check power consumption statistics for individual outlets.
 
-The application will be developed in the future, e.g. to allow checking statistics on power consumption of a given outlet.
+## Features
 
-on:
- Choose outlet and turn it on
- syntax: [on] <outlet_number>
+- **on**: Choose an outlet and turn it on. Syntax: `[on] <outlet_number>`
 
-turn_all: 
- Turn on all outlets among all PDU's with offline status
+- **turn_all**: Turn on all outlets among all PDUs with an offline status. Syntax: `[turn_all]`
 
-off:
- Choose outlet and turn it off
- syntax: [off] <outlet_number>
+- **off**: Choose an outlet and turn it off. Syntax: `[off] <outlet_number>`
 
-restart: 
- Choose outlet and restart it
- syntax: [restart] <outlet_number>
+- **restart**: Choose an outlet and restart it. Syntax: `[restart] <outlet_number>`
 
-show_off: 
- Show all outlets with off status
- syntax [show all] <raritan_ip> (if raritan ip is not given, it will show all matched outlets among all PDU's)
+- **show_off**: Show all outlets with an off status. Syntax: `[show_all] <raritan_ip>`
 
-show: 
- Show status of outlets in current raritan
- syntax [show]
+- **show**: Show the status of outlets in the current Raritan PDU. Syntax: `[show]`
 
-switch: 
- Switch to other PDU
- [switch] <raritan_nr> or <raritan_ip>
+- **switch**: Switch to another PDU. Syntax: `[switch] <raritan_nr>` or `[switch] <raritan_ip>`
 
-close: 
- Close program
- syntax [close]
+- **close**: Close the program. Syntax: `[close]`
 
-exit: 
- Return to main menu 
- syntax [exit]
+- **exit**: Return to the main menu. Syntax: `[exit]`
+
+## Usage
+
+To use the RaritanKiller application, follow these steps:
+
+1. Install the necessary dependencies by running `pip install raritan`.
+
+2. Clone this repository or download the source code files.
+
+3. Import the Raritan RPC library and the RaritanKiller module into your Python project.
+
+4. Establish a connection with the Raritan PDU using the appropriate credentials and connection details.
+
+5. If your work environment has a different naming convention for outlets than the platform hostnames, you can use the **translate_hostname** function provided in the RaritanKiller module. This function allows you to map the outlet numbers to their corresponding hostnames in your environment. You can customize this translation logic based on your naming conventions, with usage of excel file.
+
+6. Use the available commands to manage the outlets in the PDU. Refer to the features section for the command syntax.
+
+7. Customize the application or integrate it into your own project as needed.
+
+## Future Enhancements
+
+The RaritanKiller application is under active development, and the following enhancements are planned for future releases:
+
+- Support for checking and displaying power consumption statistics of individual outlets.
+
+- Integration with external monitoring systems to provide real-time alerts and notifications.
+
+- Addition of a web-based interface for easier management and control of outlets.
+
+- Improved error handling and logging capabilities.
+
+- Compatibility with other PDU models and manufacturers.
+
+
+
+Thank you for using RaritanKiller! We hope this application simplifies the management of outlets in your Raritan PDUs and contributes to a more efficient power distribution system.
